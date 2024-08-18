@@ -14,8 +14,8 @@ Location: 0x4353 Error Value: 0xFFFFFFFF
 #include "mbed.h"
 
 DigitalOut myled(LED1);
-UnbufferedSerial pc(USBRX, USBTX); // Serial outdated < OS 6 for Mbed 
-UnbufferedSerial dev(PA_6, PA_7); // Serial outdated < OS 6 for mbed
+UnbufferedSerial pc(USBRX, USBTX, 9600); // Serial outdated < OS 6 for Mbed 
+UnbufferedSerial dev(PA_9, PA_10, 115200); // Serial outdated < OS 6 for mbed
 
 void dev_recv(){
     char buff; // include char 
